@@ -1,0 +1,547 @@
+/* CONFIGURAÇÕES GERAIS E RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #334155;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* NAVBAR / CABEÇALHO GLOBAL */
+header {
+    background-color: #1a3e6e; /* Azul Marinho do Logo */
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: none;
+    letter-spacing: 1px;
+    display: flex;      
+    align-items: center; 
+}
+
+.logo img {
+    height: 40px;      
+    width: auto;     
+    object-fit: contain;
+    
+}
+
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+header nav ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* Botão Destacado na Navbar */
+.btn-nav {
+    background-color: #3b82f6; /* Azul Royal Destaque */
+    color: #ffffff !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.btn-nav:hover {
+    background-color: #2563eb;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    flex: 1;
+    padding: 40px 50px;
+}
+
+.section-title {
+    text-align: center;
+    color: #1a3e6e;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+   /* PÁGINA: HOME (HERO SECTION) */
+.hero {
+    background-image: linear-gradient(rgba(26, 62, 110, 0.6), rgba(26, 62, 110, 0.6)), url('images/Saluel_fachada.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(236, 236, 243);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar o texto na imagem */
+
+.destaque {
+    color: #52bcecec; 
+    font-style: normal; 
+    font-weight: bold; 
+}
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para destacar o texto */
+}
+
+.btn-large {
+    background-color: #3b82f6;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-large:hover {
+    background-color: #2563eb;
+}
+
+/* PÁGINA: SOBRE */
+.sobre-container {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.sobre-citacao {
+    text-align: right;   /* Força o texto a ir para o lado direito */
+    display: block;      /* Garante que ele se comporte como um bloco independente */
+    font-style: italic;  /* Opcional: deixa em itálico para dar cara de citação */
+    color: #64748b;      /* Opcional: um cinza mais suave para diferenciar do texto principal */
+    margin-top: 15px;    /* Dá um espaço entre o texto principal e ele */
+}
+
+/* Garante que o container da figura alinhe tudo ao centro */
+.sobre-fundador-foto figure {
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilização do nome do fundador */
+.nome-fundador {
+    margin-top: 12px;       /* Distância entre a foto e o nome */
+    font-size: 18px;        /* Tamanho elegante para o nome */
+    font-weight: bold;      /* Deixa em negrito */
+    color: #1a3e6e;         /* O azul marinho padrão do seu site */
+}
+
+
+
+
+
+
+/* PÁGINA: ESPECIALIDADES */
+.especialidades-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.titulo-pagina {
+    text-align: center;
+    color: #1a3e6e; /* Azul Marinho padrão */
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Cria a distribuição das 4 fotos em colunas */
+.grid-especialidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Espaço entre os cartões */
+}
+
+/* Estilo de cada Card */
+.card-especialidade {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a foto respeite a borda arredondada do card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra bem leve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito interativo ao passar o mouse */
+.card-especialidade:hover {
+    transform: translateY(-5px); /* O card sobe levemente */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* A sombra aumenta */
+}
+
+/* Container da Foto */
+.card-imagem img {
+    width: 100%;
+    height: 200px; /* Altura padronizada para todas as 4 fotos */
+    object-fit: cover; /* Recorta a imagem sem distorcê-la */
+}
+
+/* Textos dentro do Card */
+.card-conteudo {
+    padding: 20px;
+}
+
+.card-conteudo h2 {
+    color: #1a3e6e;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card-conteudo p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+
+/* PÁGINA: EQUIPE (GRID DE 10 ESPAÇOS - 5 COLUNAS X 2 LINHAS) */
+.grid-equipe {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Cria exatamente 5 colunas iguais */
+    gap: 25px;
+    justify-content: center;
+    
+}
+
+
+
+.card-membro {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card-membro img {
+    width: 200px;
+    height: 250px;
+    border-radius: 8px; /* Transforma a foto em um círculo */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 1px solid #3b82f6;
+}
+
+.card-membro h2 {
+    color: #1a3e6e;
+    margin-bottom: 5px;
+}
+
+.card-membro span {
+    color: #64748b;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-membro p {
+    font-size: 14px;
+    color: #475569;
+}
+
+/* PÁGINA: AGENDAR */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #1a3e6e;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn-submit {
+    background-color: #1a3e6e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #11294a;
+}
+
+/* FOOTER GLOBAL */
+footer {
+    background-color: #1e293b; /* Cinza Escuro Profissional */
+    color: #94a3b8;
+    padding: 40px 50px 20px 50px;
+    margin-top: auto; /* Força o footer a ir para o final mesmo se a página tiver pouco conteúdo */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+/* Estilização do logotipo do rodapé */
+.footer-logo img {
+    height: 100px;           
+    width: auto;             /* Mantém a proporção sem distorcer */
+    object-fit: contain;
+    margin-bottom: 15px;     /* Cria um espaço confortável entre o logo e o texto de baixo */
+    display: block;          /* Garante que o texto de baixo vá para a linha seguinte corretamente */
+}
+
+/* Estilização dos ícones de contato */
+.contato-icon {
+    margin-right: 8px;     /* Cria um espaço entre o ícone e o texto */
+    font-size: 18px;       /* Ajusta o tamanho do ícone */
+    vertical-align: middle;/* Alinha o ícone verticalmente com o texto */
+    color: #3b82f6;        /* Usa o Azul Royal de destaque do seu site nos ícones */
+}
+
+.fa-whatsapp {
+    color: #25d366; /* Verde do WhatsApp */
+}
+
+.fa-instagram {
+    color: #b81b30; /* Rosa do Instagram */
+}
+
+/* PÁGINA SOBRE: SEÇÃO DO FUNDADOR */
+.sobre-fundador-container {
+    display: flex;
+    align-items: center;      /* Alinha o texto verticalmente com o centro da foto */
+    justify-content: space-between;
+    gap: 40px;                /* Espaço confortável entre o texto e a foto */
+    padding: 60px 50px;       /* Margem interna para respirar na página */
+    max-width: 1200px;
+    margin: 0 auto;           /* Centraliza a seção inteira na tela */
+}
+
+.sobre-fundador-texto {
+    flex: 1;                  /* Faz o texto ocupar o espaço proporcional esquerdo */
+}
+
+.sobre-fundador-texto h2 {
+    color: #1a3e6e;           /* O azul marinho padrão do seu site */
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.sobre-fundador-texto p {
+    line-height: 1.6;         /* Deixa o espaçamento entre as linhas mais agradável para leitura */
+    color: #334155;
+    font-size: 17px;
+}
+
+.sobre-fundador-foto {
+    flex: 1;                  /* Faz a área da foto ter o mesmo peso da do texto */
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-fundador-foto img {
+    max-width: 100%;          /* Impede que a foto estoure o tamanho da tela */
+    height: 400px;            /* Define uma altura fixa */
+    object-fit: cover;        /* Corta a imagem proporcionalmente se necessário, sem distorcer o rosto */
+    border-radius: 8px;       /* Bordas levemente arredondadas para combinar com o botão da Home */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade à foto */
+}
+
+/* Responsividade: Se o site for aberto no celular, o texto fica em cima e a foto embaixo */
+@media (max-width: 768px) {
+    .sobre-fundador-container {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    
+    .sobre-fundador-foto img {
+        height: 300px;        /* Reduz um pouco o tamanho da foto no celular */
+    }
+}
+
+/* PÁGINA AGENDAR: SEÇÃO DO GOOGLE MAPS */
+.localizacao-container {
+    max-width: 1200px;
+    margin: 40px auto 60px auto; /* Afasta um pouco do formulário de agendamento */
+    padding: 0 20px;
+    text-align: center; /* Centraliza o título e o endereço */
+}
+
+.localizacao-container h2 {
+    color: #1a3e6e; /* Azul Marinho padrão */
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.localizacao-container p {
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Container do mapa para aplicar os efeitos visuais */
+.mapa-iframe {
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o mapa respeite a borda arredondada do container */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave para dar profundidade */
+}
+
+.mapa-iframe iframe {
+    display: block; /* Remove pequenos espaços em branco abaixo do iframe */
+}
+
+
+/* PÁGINA AGENDAR: BOTÃO DE WHATSAPP */
+.agendamento-rapido-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.agendamento-rapido-container h1 {
+    color: #1a3e6e;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.agendamento-rapido-container p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* O Botão Customizado */
+.btn-whatsapp-agendar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;                  /* Espaço entre o ícone e o texto */
+    background-color: #25d366;  /* Verde do WhatsApp */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px 32px;
+    border-radius: 50px;         /* Botão arredondado, estilo moderno */
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Efeitos de interação */
+.btn-whatsapp-agendar:hover {
+    background-color: #20ba5a;  /* Tom ligeiramente mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito flutuante */
+}
+
+.btn-whatsapp-agendar:active {
+    transform: translateY(0);    /* Volta ao normal ao clicar */
+}
+
+.btn-whatsapp-agendar i {
+    font-size: 24px;            /* Ícone do Whats ligeiramente maior que o texto */
+}
