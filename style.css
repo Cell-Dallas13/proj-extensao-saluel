@@ -109,13 +109,13 @@ main {
     font-size: 50px;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar o texto na imagem */
-
+}
 .destaque {
     color: #52bcecec; 
     font-style: normal; 
     font-weight: bold; 
 }
-}
+
 
 .hero p {
     font-size: 20px;
@@ -148,13 +148,13 @@ main {
 
 .sobre-citacao {
     text-align: right;   /* Força o texto a ir para o lado direito */
-    display: block;      /* Garante que ele se comporte como um bloco independente */
+    display: block;      
     font-style: italic;  /* Opcional: deixa em itálico para dar cara de citação */
     color: #64748b;      /* Opcional: um cinza mais suave para diferenciar do texto principal */
     margin-top: 15px;    /* Dá um espaço entre o texto principal e ele */
 }
 
-/* Garante que o container da figura alinhe tudo ao centro */
+/* Garante que o container da figura alinhe tudo ao centro */   
 .sobre-fundador-foto figure {
     text-align: center;
     width: 100%;
@@ -163,9 +163,9 @@ main {
 /* Estilização do nome do fundador */
 .nome-fundador {
     margin-top: 12px;       /* Distância entre a foto e o nome */
-    font-size: 18px;        /* Tamanho elegante para o nome */
+    font-size: 18px;        /* Tamanho para o nome */
     font-weight: bold;      /* Deixa em negrito */
-    color: #1a3e6e;         /* O azul marinho padrão do seu site */
+    color: #1a3e6e;         /* O azul marinho padrão do site */
 }
 
 
@@ -238,7 +238,7 @@ main {
 /* PÁGINA: EQUIPE (GRID DE 10 ESPAÇOS - 5 COLUNAS X 2 LINHAS) */
 .grid-equipe {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Cria exatamente 5 colunas iguais */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 25px;
     justify-content: center;
     
@@ -544,4 +544,31 @@ footer {
 
 .btn-whatsapp-agendar i {
     font-size: 24px;            /* Ícone do Whats ligeiramente maior que o texto */
+}
+
+/* AJUSTES PARA TELAS DE CELULARES */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column; /* Coloca o logo em cima e o menu embaixo */
+        gap: 15px;
+    }
+
+    header nav ul {
+        flex-wrap: wrap; /* Permite que os links quebrem a linha se não couberem */
+        justify-content: center;
+        gap: 30px;
+    }
+
+    main {
+        padding: 20px 15px; /* Reduz a margem lateral do conteúdo no celular */
+    }
+
+    .hero h1 {
+        font-size: 32px; /* Diminui para caber na tela do celular */
+    }
+
+    .titulo-pagina, .section-title {
+        font-size: 26px;
+    }
 }
